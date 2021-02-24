@@ -15,8 +15,7 @@
     "commitlint": "commitlint -E HUSKY_GIT_PARAMS",
     "lint:staged": "lint-staged",
     "format": "prettier --write --ignore-unknown .",
-    "validate": "kcd-scripts validate",
-    "semantic-release": "semantic-release"
+    "validate": "kcd-scripts validate"
   },
   "keywords": [
     "validator",
