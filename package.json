@@ -23,6 +23,9 @@
   ],
   "author": "Janno Tabamo <jannotabamo@gmail.com> (https://resume.jannomeister.com)",
   "license": "MIT",
+  "dependencies": {
+    "class-validator": "^0.13.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^12.0.0",
     "@commitlint/config-conventional": "^12.0.0",
@@ -55,9 +58,5 @@
   "bugs": {
     "url": "https://github.com/jannomeister/ph-id-validator/issues"
   },
-  "homepage": "https://github.com/jannomeister/ph-id-validator#readme",
-  "dependencies": {
-    "class-validator": "^0.13.1",
-    "husky": "^4.3.8"
-  }
+  "homepage": "https://github.com/jannomeister/ph-id-validator#readme"
 }
