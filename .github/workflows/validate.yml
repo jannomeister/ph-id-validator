@@ -26,8 +26,8 @@ jobs:
         with:
           useLockFile: false
 
-      - name: ▶️ Run validate script
-        run: npm run validate
+      - name: ▶️ Run test script
+        run: npm run test:all
 
   release:
     needs: main
