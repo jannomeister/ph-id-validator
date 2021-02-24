@@ -58,7 +58,7 @@ describe("Validate Type of IDs", () => {
     {
       name: "should be a valid Voter's ID",
       input: "3022-0201B-C0272ESA20000",
-      output: false,
+      output: true,
       fn: isVotersId,
     },
     {
@@ -81,3 +81,8 @@ describe("Validate Type of IDs", () => {
     it(name, testFn);
   }
 });
+
+/*
+  eslint
+    jest/valid-title: "off"
+*/
