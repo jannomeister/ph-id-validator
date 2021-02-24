@@ -57,6 +57,7 @@
   },
   "homepage": "https://github.com/jannomeister/ph-id-validator#readme",
   "dependencies": {
-    "class-validator": "^0.13.1"
+    "class-validator": "^0.13.1",
+    "husky": "^4.3.8"
   }
 }
