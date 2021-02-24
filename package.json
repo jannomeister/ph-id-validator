@@ -10,6 +10,7 @@
   },
   "scripts": {
     "test": "kcd-scripts test",
+    "test:all": "kcd-scripts test --no-watch",
     "lint": "kcd-scripts lint",
     "commitlint": "commitlint -E HUSKY_GIT_PARAMS",
     "lint:staged": "lint-staged",
