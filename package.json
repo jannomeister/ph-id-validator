@@ -9,12 +9,12 @@
     "yarn": ">=1"
   },
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watchAll",
+    "test": "kcd-scripts test",
     "lint": "kcd-scripts lint",
     "commitlint": "commitlint -E HUSKY_GIT_PARAMS",
     "lint:staged": "lint-staged",
-    "format": "prettier --write --ignore-unknown ."
+    "format": "prettier --write --ignore-unknown .",
+    "validate": "kcd-scripts validate"
   },
   "keywords": [
     "validator",

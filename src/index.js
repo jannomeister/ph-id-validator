@@ -86,7 +86,7 @@ const isPagIbigLoyaltyCard = (idNumber) => {
   }
 
   const loyaltyCard = idNumber.split("-").join("");
-  return isAlphanumeric(loyaltyCard) && length(loyaltyCard, 22, 22);
+  return isAlphanumeric(loyaltyCard) && length(loyaltyCard, 12, 12);
 };
 
 const isNBIClearance = (idNumber) => {
