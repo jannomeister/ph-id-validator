@@ -15,7 +15,7 @@
     "lint": "kcd-scripts lint",
     "setup": "npm install && npm run validate -s",
     "test": "kcd-scripts test",
-    "test:all": "kcd-scripts test --watchAll",
+    "test:all": "kcd-scripts test --no-watch",
     "test:update": "npm test -- --updateSnapshot --coverage",
     "typecheck": "kcd-scripts typecheck",
     "format": "prettier --write --ignore-unknown .",
