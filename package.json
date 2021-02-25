@@ -2,21 +2,29 @@
   "name": "ph-id-validator",
   "version": "0.0.0-semantically-released",
   "description": "Identification number validation for PH ids",
-  "main": "src/index.js",
+  "main": "dist/ph-id-validator.cjs.js",
+  "module": "dist/ph-id-validator.esm.js",
+  "types": "dist/index.d.ts",
   "engines": {
     "node": ">=10.18",
     "npm": ">=6",
     "yarn": ">=1"
   },
   "scripts": {
-    "test": "kcd-scripts test",
-    "test:all": "kcd-scripts test --no-watch",
+    "build": "kcd-scripts build --bundle --environment BUILD_NAME:phIdValidator",
     "lint": "kcd-scripts lint",
+    "setup": "npm install && npm run validate -s",
+    "test": "kcd-scripts test",
+    "typecheck": "kcd-scripts typecheck",
+    "test:update": "npm test -- --updateSnapshot --coverage",
+    "format": "prettier --write --ignore-unknown .",
     "commitlint": "commitlint -E HUSKY_GIT_PARAMS",
     "lint:staged": "lint-staged",
-    "format": "prettier --write --ignore-unknown .",
     "validate": "kcd-scripts validate"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "validator",
     "id",
@@ -25,17 +33,20 @@
   "author": "Janno Tabamo <jannotabamo@gmail.com> (https://resume.jannomeister.com)",
   "license": "MIT",
   "dependencies": {
-    "class-validator": "^0.13.1"
+    "@babel/runtime": "^7.13.7",
+    "validator": "^13.5.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.0",
     "@commitlint/config-conventional": "^12.0.0",
+    "@types/validator": "^13.1.3",
     "jest": "^26.6.3",
     "kcd-scripts": "^7.7.0",
     "lint-staged": "^10.5.4",
     "prettier": "2.2.1",
     "pretty-quick": "^3.1.0",
-    "semantic-release": "^17.3.9"
+    "semantic-release": "^17.3.9",
+    "typescript": "^4.2.2"
   },
   "lint-staged": {
     "*/*.js": [
