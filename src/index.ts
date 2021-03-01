@@ -16,6 +16,69 @@ const hasOnySpace = (str: string) => {
   return /[ ]/.test(str);
 };
 
+const isSECRegistrationCert = (idNumber: string) => {
+  return (
+    isAlphanumericValidator(idNumber) &&
+    isLengthValidator(idNumber, { min: 11, max: 11 })
+  );
+};
+
+const isOWWAId = (idNumber: string) => {
+  return (
+    isNumericValidator(idNumber) &&
+    isLengthValidator(idNumber, { min: 11, max: 11 })
+  );
+};
+
+const isSeamanBook = (idNumber: string) => {
+  return (
+    isNumericValidator(idNumber) &&
+    isLengthValidator(idNumber, { min: 9, max: 9 })
+  );
+};
+
+const isIBPId = (idNumber: string) => {
+  return (
+    isNumericValidator(idNumber) &&
+    isLengthValidator(idNumber, { min: 5, max: 5 })
+  );
+};
+
+const isGSISId = (idNumber: string) => {
+  return (
+    isNumericValidator(idNumber) &&
+    isLengthValidator(idNumber, { min: 11, max: 11 })
+  );
+};
+
+const isPassport = (idNumber: string) => {
+  return (
+    isAlphanumericValidator(idNumber) &&
+    isLengthValidator(idNumber, { min: 9, max: 9 })
+  );
+};
+
+const isPRCId = (idNumber: string) => {
+  return (
+    isNumericValidator(idNumber) &&
+    isLengthValidator(idNumber, { min: 7, max: 7 })
+  );
+};
+
+const isOFWId = (idNumber: string) => {
+  return (
+    isNumericValidator(idNumber) &&
+    isLengthValidator(idNumber, { min: 11, max: 11 })
+  );
+};
+
+const isACRICard = (idNumber: string) => {
+  return (
+    isNumericValidator(idNumber) &&
+    isLengthValidator(idNumber, { min: 9, max: 9 })
+  );
+};
+
 const isTinId = (idNumber: string) => {
   if (!hasOnlyDash(idNumber) && !isNumericValidator(idNumber)) {
     return false;
@@ -144,4 +207,13 @@ export {
   isVotersId,
   isPagIbigLoyaltyCard,
   isNBIClearance,
+  isSECRegistrationCert,
+  isOWWAId,
+  isSeamanBook,
+  isIBPId,
+  isGSISId,
+  isPassport,
+  isPRCId,
+  isOFWId,
+  isACRICard,
 };
